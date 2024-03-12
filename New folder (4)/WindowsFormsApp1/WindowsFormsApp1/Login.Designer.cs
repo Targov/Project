@@ -131,7 +131,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mistral", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.PapayaWhip;
-            this.label1.Location = new System.Drawing.Point(59, 31);
+            this.label1.Location = new System.Drawing.Point(51, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 52);
             this.label1.TabIndex = 5;
