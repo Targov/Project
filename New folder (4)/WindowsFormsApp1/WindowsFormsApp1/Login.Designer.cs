@@ -46,7 +46,7 @@
             this.btnLogin.Location = new System.Drawing.Point(96, 240);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(111, 28);
+            this.btnLogin.Size = new System.Drawing.Size(111, 36);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -69,7 +69,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.ForeColor = System.Drawing.Color.PapayaWhip;
+            this.lblPassword.ForeColor = System.Drawing.Color.DarkOrange;
             this.lblPassword.Location = new System.Drawing.Point(38, 186);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
@@ -101,10 +101,10 @@
             // 
             this.Exit.BackColor = System.Drawing.Color.PapayaWhip;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exit.Location = new System.Drawing.Point(3, 4);
+            this.Exit.Location = new System.Drawing.Point(13, 2);
             this.Exit.Margin = new System.Windows.Forms.Padding(4);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(111, 28);
+            this.Exit.Size = new System.Drawing.Size(111, 36);
             this.Exit.TabIndex = 5;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@
             this.label1.ForeColor = System.Drawing.Color.PapayaWhip;
             this.label1.Location = new System.Drawing.Point(51, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 52);
+            this.label1.Size = new System.Drawing.Size(180, 52);
             this.label1.TabIndex = 5;
             this.label1.Text = "Cafeterium";
             // 
