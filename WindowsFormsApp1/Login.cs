@@ -12,11 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
-        
-        
+         
        
-        Form2 work = new Form2();
-        Admin adminForm = new Admin();
+        Form2 tables = new Form2();
+       
+      
         public Login()
         {
             InitializeComponent();
@@ -24,15 +24,15 @@ namespace WindowsFormsApp1
 
         public void button1_Click(object sender, EventArgs e)
         {
-            // Check the login credentials or condition for determining the user type
-            if (true) // normal hashed MD5 login
+            
+            if (true)
             {
-                work.Show();               
+                tables.Show();               
                 this.Hide();
             }
-            else if (false) // implement Admin login
+            else if (false) 
             {
-                adminForm.Show();
+                label2.Visible=false;
                 this.Hide();
             }
         }
