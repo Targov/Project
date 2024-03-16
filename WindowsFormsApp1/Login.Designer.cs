@@ -36,7 +36,6 @@
             this.Exit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,17 +137,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Cafeterium";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 390);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(560, 46);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Невалидно име или парола";
-            this.label2.Visible = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -156,7 +144,6 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.coffee;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(613, 486);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -166,7 +153,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -180,7 +166,6 @@
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
 

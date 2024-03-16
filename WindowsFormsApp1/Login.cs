@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace WindowsFormsApp1
 {
@@ -25,6 +28,7 @@ namespace WindowsFormsApp1
         public void button1_Click(object sender, EventArgs e)
         {
             
+
             if (true)
             {
                 tables.Show();               
@@ -35,6 +39,7 @@ namespace WindowsFormsApp1
                 label2.Visible=false;
                 this.Hide();
             }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
