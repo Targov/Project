@@ -27,17 +27,7 @@ namespace WindowsFormsApp1
 
         public void button1_Click(object sender, EventArgs e)
         {
-            // Check the login credentials or condition for determining the user type
-            if (true) // normal hashed MD5 login
-            {
-                work.Show();               
-                this.Hide();
-            }
-            else if (false) // implement Admin login
-            {
-                adminForm.Show();
-                this.Hide();
-            }
+            tables.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
