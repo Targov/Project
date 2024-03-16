@@ -119,7 +119,7 @@
             this.groupBox1.Controls.Add(this.lblPassword);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Location = new System.Drawing.Point(151, 71);
+            this.groupBox1.Location = new System.Drawing.Point(140, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(308, 300);
             this.groupBox1.TabIndex = 6;
@@ -143,7 +143,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.coffee;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(675, 535);
+            this.ClientSize = new System.Drawing.Size(613, 486);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
