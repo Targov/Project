@@ -36,6 +36,7 @@
             this.Exit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.LawnGreen;
+            this.lblUsername.ForeColor = System.Drawing.Color.PapayaWhip;
             this.lblUsername.Location = new System.Drawing.Point(38, 126);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
@@ -137,6 +138,16 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Cafeterium";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(159, 393);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Невалидно име или парола";
+            this.label2.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,6 +155,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.coffee;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(613, 486);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -153,6 +165,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -166,6 +179,7 @@
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
