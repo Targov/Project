@@ -15,11 +15,11 @@ namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
-        
-        
+         
        
-        Form2 work = new Form2();
-        Admin adminForm = new Admin();
+        Form2 tables = new Form2();
+       
+      
         public Login()
         {
             InitializeComponent();
@@ -28,6 +28,18 @@ namespace WindowsFormsApp1
         public void button1_Click(object sender, EventArgs e)
         {
             
+
+            if (true)
+            {
+                tables.Show();               
+                this.Hide();
+            }
+            else if (false) 
+            {
+                label2.Visible=false;
+                this.Hide();
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
