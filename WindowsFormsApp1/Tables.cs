@@ -50,7 +50,32 @@ namespace WindowsFormsApp1
 
         private void btnFisk_Click(object sender, EventArgs e)
         {
+            menu.Show();
+            this.Hide();
+        }
 
+        private void btnTable5_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Hide();
+        }
+
+        private void btnTable2_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Hide();
+        }
+
+        private void btnTable4_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Hide();
+        }
+
+        private void btnTable6_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Hide();
         }
     }
 }

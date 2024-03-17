@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,15 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 
 
 namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
-         
-       
+
+        SqlConnection connection = new SqlConnection(@"(localdb)\MSSQLLocalDB");
         Form2 tables = new Form2();
        
       
@@ -27,17 +28,30 @@ namespace WindowsFormsApp1
 
         public void button1_Click(object sender, EventArgs e)
         {
-            
-            if (true)
+            String username, userPassword;
+            username = textBox1.Text;
+            userPassword = textBox2.Text;
+            try
             {
-                tables.Show();               
-                this.Hide();
+                String querry = "SELECT * FROM Users WHERE usernsme = '"+textBox1.Text+"' AND password = '"+textBox2.Text+"'";
+                SqlCommand command = new SqlCommand(querry, connection);
+
+                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@password", userPassword);
+                connection.Open();
+                int count = (int)command.ExecuteScalar();
+                if (count == 1)
+                {
+                    tables.Show();
+                    this.Hide();
+                }
+                else { label2.Visible = true; }
             }
-            else if (false) 
+            catch
             {
                 label2.Visible = true;
-                this.Hide();
             }
+            finally { connection.Close(); }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -66,8 +80,7 @@ namespace WindowsFormsApp1
         }
 
         private void Login_Load(object sender, EventArgs e)
-        {
-
+        { 
         }
     }
 
