@@ -16,8 +16,6 @@ namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
-
-        SqlConnection connection = new SqlConnection(@"(localdb)\MSSQLLocalDB");
         Form2 tables = new Form2();
        
       
@@ -28,30 +26,34 @@ namespace WindowsFormsApp1
 
         public void button1_Click(object sender, EventArgs e)
         {
+            string connectionString = "Data Source=NIKOLAPC\\SQLEXPRESS";
             String username, userPassword;
             username = textBox1.Text;
             userPassword = textBox2.Text;
-            try
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                String querry = "SELECT * FROM Users WHERE usernsme = '"+textBox1.Text+"' AND password = '"+textBox2.Text+"'";
-                SqlCommand command = new SqlCommand(querry, connection);
-
-                command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@password", userPassword);
-                connection.Open();
-                int count = (int)command.ExecuteScalar();
-                if (count == 1)
+                try
                 {
-                    tables.Show();
-                    this.Hide();
+                    String querry = "SELECT COUNT(*) FROM Users WHERE usernsme = '" + textBox1.Text + "' AND password = '" + textBox2.Text + "'";
+                    SqlCommand command = new SqlCommand(querry, connection);
+
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", userPassword);
+                    connection.Open();
+                    int count = (int)command.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        tables.Show();
+                        this.Hide();
+                    }
+                    else { label2.Visible = true; }
                 }
-                else { label2.Visible = true; }
+                catch
+                {
+                    label2.Visible = true;
+                }
+                finally { connection.Close(); }
             }
-            catch
-            {
-                label2.Visible = true;
-            }
-            finally { connection.Close(); }
         }
 
         private void Form1_Load(object sender, EventArgs e)
