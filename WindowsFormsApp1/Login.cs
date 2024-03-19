@@ -26,7 +26,8 @@ namespace WindowsFormsApp1
 
         public void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=NIKOLAPC\\SQLEXPRESS";
+            string connectionString = "Data Source=NIKOLAPC\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
+
             String username, userPassword;
             username = textBox1.Text;
             userPassword = textBox2.Text;
@@ -34,11 +35,11 @@ namespace WindowsFormsApp1
             {
                 try
                 {
-                    String querry = "SELECT COUNT(*) FROM Users WHERE usernsme = '" + textBox1.Text + "' AND password = '" + textBox2.Text + "'";
+                    String querry = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
                     SqlCommand command = new SqlCommand(querry, connection);
 
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", userPassword);
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", userPassword);
                     connection.Open();
                     int count = (int)command.ExecuteScalar();
                     if (count > 0)
@@ -46,10 +47,14 @@ namespace WindowsFormsApp1
                         tables.Show();
                         this.Hide();
                     }
-                    else { label2.Visible = true; }
+                    else
+                    { 
+                        label2.Visible = true;
+                    }
                 }
                 catch
                 {
+             
                     label2.Visible = true;
                 }
                 finally { connection.Close(); }
