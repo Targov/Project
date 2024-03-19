@@ -77,6 +77,7 @@
             this.btnTable4.TabIndex = 0;
             this.btnTable4.Text = "Maca 4";
             this.btnTable4.UseVisualStyleBackColor = false;
+            this.btnTable4.Click += new System.EventHandler(this.btnTable4_Click);
             // 
             // btnTable5
             // 
@@ -90,6 +91,7 @@
             this.btnTable5.TabIndex = 0;
             this.btnTable5.Text = "Maca 5";
             this.btnTable5.UseVisualStyleBackColor = false;
+            this.btnTable5.Click += new System.EventHandler(this.btnTable5_Click);
             // 
             // btnTable2
             // 
@@ -103,6 +105,7 @@
             this.btnTable2.TabIndex = 0;
             this.btnTable2.Text = "Maca 2";
             this.btnTable2.UseVisualStyleBackColor = false;
+            this.btnTable2.Click += new System.EventHandler(this.btnTable2_Click);
             // 
             // btnTable6
             // 
@@ -116,6 +119,7 @@
             this.btnTable6.TabIndex = 0;
             this.btnTable6.Text = "Maca 6";
             this.btnTable6.UseVisualStyleBackColor = false;
+            this.btnTable6.Click += new System.EventHandler(this.btnTable6_Click);
             // 
             // label1
             // 
