@@ -17,8 +17,7 @@ namespace WindowsFormsApp1
     public partial class Login : Form
     {
         Form2 tables = new Form2();
-       
-      
+
         public Login()
         {
             InitializeComponent();

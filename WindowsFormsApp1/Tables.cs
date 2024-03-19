@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
-        Form menu = new Form();
+        Menu menu = new Menu();
         public Form2()
         {
             InitializeComponent();
