@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp1
 {
     public partial class Menu : Form
     {
+        public SqlConnection connection = new SqlConnection();
         public Menu()
         {
             InitializeComponent();
+            connection.ConnectionString = "Data Source=NIKOLAPC\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
         }
 
         private void капучино400ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -424,8 +429,6 @@ namespace WindowsFormsApp1
                     textBox1.Text = "6,50";
                 }
             }
-
-
             if (radioButton8.Checked)
             {
                 if (comboBox1.SelectedItem.ToString() == "Крем брюле")
@@ -469,12 +472,27 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = "1";
+            }
             dataGridView1.Rows.Add(comboBox1.Text, textBox1.Text, textBox2.Text, textBox3.Text, dateTimePicker1.Text);
-            textBox4.Text = (Convert.ToDouble(textBox4.Text) + Convert.ToDouble(textBox3.Text)).ToString();
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-
+            if (textBox4.Text == "")
+            {
+                textBox4.Text = (Convert.ToDouble(textBox3.Text)).ToString();
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                comboBox1.Text = "";
+            }
+            else
+            {
+                textBox4.Text = (Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox2.Text)).ToString();
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                comboBox1.Text = "";
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -485,7 +503,7 @@ namespace WindowsFormsApp1
                 {
                     if (dataGridView1.Rows[i].Selected)
                     {
-                        textBox4.Text = (Convert.ToDouble(textBox4.Text) - Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value)).ToString();
+                        textBox4.Text = (Convert.ToDouble(textBox4.Text) - Convert.ToInt16(dataGridView1.Rows[i].Cells[3].Value)).ToString();
                         dataGridView1.Rows.RemoveAt(i);
                     }
                 }
@@ -507,7 +525,18 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                String querry = "INSERT INTO Receipt Values ('" + dataGridView1.Rows[i].Cells[0].Value + "','" + dataGridView1.Rows[i].Cells[1].Value + "','" + dataGridView1.Rows[i].Cells[2].Value + "','" + dataGridView1.Rows[i].Cells[3].Value + "','" + dataGridView1.Rows[i].Cells[4].Value + "')";
+                SqlCommand comand = new SqlCommand(querry, connection);     
+                connection.Open();
+                comand.ExecuteNonQuery();
+                connection.Close();
+            }   
+            dataGridView1.Rows.Clear();
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -536,6 +565,11 @@ namespace WindowsFormsApp1
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
         {
 
         }
