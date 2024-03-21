@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class menu : Form
+    public partial class Menu : Form
     {
-        public menu()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -463,14 +463,14 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text.Length > 0)
             {
-                textBox3.Text = (Convert.ToInt64(textBox2.Text) * Convert.ToInt64(textBox3.Text)).ToString();
+                textBox3.Text = (Convert.ToDouble(textBox2.Text) * Convert.ToDouble(textBox1.Text)).ToString();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(textBox1.Text, textBox1.Text, textBox2.Text, textBox3.Text, dateTimePicker1.Text);
-            textBox4.Text = (Convert.ToInt16(textBox4) + Convert.ToInt16(textBox3)).ToString();
+            dataGridView1.Rows.Add(comboBox1.Text, textBox1.Text, textBox2.Text, textBox3.Text, dateTimePicker1.Text);
+            textBox4.Text = (Convert.ToDouble(textBox4.Text) + Convert.ToDouble(textBox3.Text)).ToString();
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
@@ -485,7 +485,7 @@ namespace WindowsFormsApp1
                 {
                     if (dataGridView1.Rows[i].Selected)
                     {
-                        textBox4.Text = (Convert.ToInt16(textBox4.Text) - Convert.ToInt16(dataGridView1.Rows[i].Cells[4].Value)).ToString();
+                        textBox4.Text = (Convert.ToDouble(textBox4.Text) - Convert.ToDouble(dataGridView1.Rows[i].Cells[4].Value)).ToString();
                         dataGridView1.Rows.RemoveAt(i);
                     }
                 }
@@ -496,11 +496,46 @@ namespace WindowsFormsApp1
         {
             if (textBox5.Text.Length > 0)
             {
-                textBox6.Text = (Convert.ToInt16(textBox4.Text) - Convert.ToInt16(textBox5.Text)).ToString();
+                textBox6.Text = (Convert.ToDouble(textBox4.Text) - Convert.ToDouble(textBox5.Text)).ToString();
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }

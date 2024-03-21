@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,18 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 
 
 namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
-         
-       
         Form2 tables = new Form2();
-       
-      
+
         public Login()
         {
             InitializeComponent();
@@ -27,16 +25,38 @@ namespace WindowsFormsApp1
 
         public void button1_Click(object sender, EventArgs e)
         {
-            
-            if (true)
+            string connectionString = "Data Source=NIKOLAPC\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
+
+            String username, userPassword;
+            username = textBox1.Text;
+            userPassword = textBox2.Text;
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                tables.Show();               
-                this.Hide();
-            }
-            else if (false) 
-            {
-                label2.Visible = true;
-                this.Hide();
+                try
+                {
+                    String querry = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
+                    SqlCommand command = new SqlCommand(querry, connection);
+
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", userPassword);
+                    connection.Open();
+                    int count = (int)command.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        tables.Show();
+                        this.Hide();
+                    }
+                    else
+                    { 
+                        label2.Visible = true;
+                    }
+                }
+                catch
+                {
+             
+                    label2.Visible = true;
+                }
+                finally { connection.Close(); }
             }
         }
 
@@ -66,8 +86,7 @@ namespace WindowsFormsApp1
         }
 
         private void Login_Load(object sender, EventArgs e)
-        {
-
+        { 
         }
     }
 
