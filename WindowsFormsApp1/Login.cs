@@ -59,6 +59,10 @@ namespace WindowsFormsApp1
                 finally { connection.Close(); }
             }
         }
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -75,10 +79,7 @@ namespace WindowsFormsApp1
          
         }
 
-        private void Exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {

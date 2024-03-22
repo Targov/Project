@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
-        Menu menu = new Menu();
+        Form menu = new Form();
         public Form2()
         {
             InitializeComponent();
@@ -54,25 +54,25 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-        private void btnTable5_Click(object sender, EventArgs e)
-        {
-            menu.Show();
-            this.Hide();
-        }
-
-        private void btnTable2_Click(object sender, EventArgs e)
-        {
-            menu.Show();
-            this.Hide();
-        }
-
         private void btnTable4_Click(object sender, EventArgs e)
         {
             menu.Show();
             this.Hide();
         }
 
+        private void btnTable5_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Hide();
+        }
+
         private void btnTable6_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Hide();
+        }
+
+        private void btnTable2_Click(object sender, EventArgs e)
         {
             menu.Show();
             this.Hide();
