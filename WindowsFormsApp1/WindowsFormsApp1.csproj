@@ -115,6 +115,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewEmployee.Designer.cs">
+      <DependentUpon>AddNewEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     <Compile Include="Tables.Designer.cs">
       <DependentUpon>Tables.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNewEmployee.resx">
+      <DependentUpon>AddNewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>

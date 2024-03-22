@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace WindowsFormsApp1
         public Admin()
         {
             InitializeComponent();
+        }
+
+        private void buttonNewEmployee_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddNewEmployee addNewEmployee = new AddNewEmployee();
+            addNewEmployee.Show();
         }
     }
 }
