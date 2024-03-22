@@ -487,7 +487,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                textBox4.Text = (Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox2.Text)).ToString();
+                textBox4.Text = (Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox4.Text)).ToString();
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
@@ -503,7 +503,7 @@ namespace WindowsFormsApp1
                 {
                     if (dataGridView1.Rows[i].Selected)
                     {
-                        textBox4.Text = (Convert.ToDouble(textBox4.Text) - Convert.ToInt16(dataGridView1.Rows[i].Cells[3].Value)).ToString();
+                        textBox4.Text = (Convert.ToDouble(textBox4.Text) - Convert.ToDouble(dataGridView1.Rows[i].Cells[3].Value)).ToString();
                         dataGridView1.Rows.RemoveAt(i);
                     }
                 }
@@ -514,7 +514,7 @@ namespace WindowsFormsApp1
         {
             if (textBox5.Text.Length > 0)
             {
-                textBox6.Text = (Convert.ToDouble(textBox4.Text) - Convert.ToDouble(textBox5.Text)).ToString();
+                textBox6.Text = ((Convert.ToDouble(textBox4.Text) - Convert.ToDouble(textBox5.Text)) * -1).ToString();
             }
         }
 
@@ -527,7 +527,7 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                String querry = "INSERT INTO Receipt Values ('" + dataGridView1.Rows[i].Cells[0].Value + "','" + dataGridView1.Rows[i].Cells[1].Value + "','" + dataGridView1.Rows[i].Cells[2].Value + "','" + dataGridView1.Rows[i].Cells[3].Value + "','" + dataGridView1.Rows[i].Cells[4].Value + "')";
+                String querry = "INSERT INTO Menu Values ('" + dataGridView1.Rows[i].Cells[0].Value + "','" + dataGridView1.Rows[i].Cells[1].Value + "','" + dataGridView1.Rows[i].Cells[2].Value + "','" + dataGridView1.Rows[i].Cells[3].Value + "','" + dataGridView1.Rows[i].Cells[4].Value + "')";
                 SqlCommand comand = new SqlCommand(querry, connection);     
                 connection.Open();
                 comand.ExecuteNonQuery();
@@ -572,6 +572,13 @@ namespace WindowsFormsApp1
         private void Menu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Bill bill = new Bill();
+            bill.Show();
         }
     }
 }
