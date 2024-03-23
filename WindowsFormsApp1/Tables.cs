@@ -23,7 +23,8 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public bool IsFormVisible => this.Visible;
+        public void button2_Click(object sender, EventArgs e)
         {
 
             menu.Show();
@@ -48,31 +49,31 @@ namespace WindowsFormsApp1
 
         }
 
-        private void btnFisk_Click(object sender, EventArgs e)
+        public void btnFisk_Click(object sender, EventArgs e)
         {
             menu.Show();
             this.Hide();
         }
 
-        private void btnTable4_Click(object sender, EventArgs e)
+        public void btnTable4_Click(object sender, EventArgs e)
         {
             menu.Show();
             this.Hide();
         }
 
-        private void btnTable5_Click(object sender, EventArgs e)
+        public void btnTable5_Click(object sender, EventArgs e)
         {
             menu.Show();
             this.Hide();
         }
 
-        private void btnTable6_Click(object sender, EventArgs e)
+        public void btnTable6_Click(object sender, EventArgs e)
         {
             menu.Show();
             this.Hide();
         }
 
-        private void btnTable2_Click(object sender, EventArgs e)
+        public void btnTable2_Click(object sender, EventArgs e)
         {
             menu.Show();
             this.Hide();
