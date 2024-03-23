@@ -48,7 +48,7 @@
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(83, 29);
             this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Вход";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -60,9 +60,9 @@
             this.lblUsername.ForeColor = System.Drawing.Color.PapayaWhip;
             this.lblUsername.Location = new System.Drawing.Point(28, 102);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(77, 17);
+            this.lblUsername.Size = new System.Drawing.Size(43, 17);
             this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "Username:";
+            this.lblUsername.Text = " Име:";
             // 
             // lblPassword
             // 
@@ -71,9 +71,9 @@
             this.lblPassword.ForeColor = System.Drawing.Color.PapayaWhip;
             this.lblPassword.Location = new System.Drawing.Point(28, 151);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(73, 17);
+            this.lblPassword.Size = new System.Drawing.Size(62, 17);
             this.lblPassword.TabIndex = 2;
-            this.lblPassword.Text = "Password:";
+            this.lblPassword.Text = "Парола:";
             this.lblPassword.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
@@ -97,11 +97,11 @@
             // 
             this.Exit.BackColor = System.Drawing.Color.PapayaWhip;
             this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exit.Location = new System.Drawing.Point(10, 2);
+            this.Exit.Location = new System.Drawing.Point(2, 2);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(83, 29);
+            this.Exit.Size = new System.Drawing.Size(62, 28);
             this.Exit.TabIndex = 5;
-            this.Exit.Text = "Exit";
+            this.Exit.Text = "Изход";
             this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 

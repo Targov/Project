@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String querry = "INSERT INTO Menu Values ('" + textBox1.Text + "','" + textBox2.Text + "')";
+            String querry = "INSERT INTO Menu Values ('" + txtUsername.Text + "','" + txtPassword.Text + "')";
             SqlCommand comand = new SqlCommand(querry, connection);
             connection.Open();
             comand.ExecuteNonQuery();
