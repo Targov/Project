@@ -21,23 +21,39 @@ namespace WindowsFormsApp1
             InitializeComponent();
             connection.ConnectionString = "Data Source=NIKOLAPC\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
         }
+        public Button BtnAdd => btnAdd;
+        public bool IsMenuVisible => this.Visible;
+        public RadioButton RbHotDrinks => rbHotDrinks;
+        public RadioButton RbColdDrinks => rbColdDrinks;
+        public RadioButton RbSoda => rbSoda;
+        public RadioButton RbCocktail => rbCocktail;
+        public RadioButton RbAlcohol => rbAlcohol;
+        public RadioButton RbExtras => rbExtras;
+        public RadioButton RbHotDishes => rbHotDishes;
+        public RadioButton RbDesert => rbDesert;
+        public ComboBox CbChoose => cbChoose;
+        public TextBox TxtPrice => txtPrice;
+        public TextBox TxtCount => txtCount;
+        public TextBox TxtTotalOfBill => txtTotalOfBill;
+        public DataGridView DgBill => dgBill;
+        
 
-        private void капучино400ToolStripMenuItem_Click(object sender, EventArgs e)
+        public void капучино400ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void топлиНапиткиToolStripMenuItem_Click(object sender, EventArgs e)
+        public void топлиНапиткиToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        public void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        public void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             rbHotDrinks.ForeColor = System.Drawing.Color.DarkBlue;
             rbColdDrinks.ForeColor = System.Drawing.Color.RosyBrown;
@@ -61,7 +77,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        public void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             rbHotDrinks.ForeColor = System.Drawing.Color.RosyBrown;
             rbColdDrinks.ForeColor = System.Drawing.Color.DarkBlue;
@@ -81,7 +97,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        public void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             rbHotDrinks.ForeColor = System.Drawing.Color.RosyBrown;
             rbColdDrinks.ForeColor = System.Drawing.Color.RosyBrown;
@@ -108,7 +124,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        public void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
             rbHotDrinks.ForeColor = System.Drawing.Color.RosyBrown;
             rbColdDrinks.ForeColor = System.Drawing.Color.RosyBrown;
@@ -128,7 +144,7 @@ namespace WindowsFormsApp1
             cbChoose.Items.Add("Луканка");
         }
 
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        public void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             rbHotDrinks.ForeColor = System.Drawing.Color.RosyBrown;
             rbColdDrinks.ForeColor = System.Drawing.Color.RosyBrown;
@@ -156,7 +172,7 @@ namespace WindowsFormsApp1
             cbChoose.Items.Add("Бира бутилка");
         }
 
-        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        public void radioButton7_CheckedChanged(object sender, EventArgs e)
         {
             rbHotDrinks.ForeColor = System.Drawing.Color.RosyBrown;
             rbColdDrinks.ForeColor = System.Drawing.Color.RosyBrown;
@@ -176,7 +192,7 @@ namespace WindowsFormsApp1
             cbChoose.Items.Add("Пържени картофи със сирене");
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        public void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             rbHotDrinks.ForeColor = System.Drawing.Color.RosyBrown;
             rbColdDrinks.ForeColor = System.Drawing.Color.RosyBrown;
@@ -195,7 +211,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+        public void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
             rbHotDrinks.ForeColor = System.Drawing.Color.RosyBrown;
             rbColdDrinks.ForeColor = System.Drawing.Color.RosyBrown;
@@ -218,7 +234,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (rbHotDrinks.Checked)
             {
@@ -462,7 +478,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        public void textBox2_TextChanged(object sender, EventArgs e)
         {
             if (txtPrice.Text.Length > 0)
             {
@@ -470,7 +486,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             if (txtCount.Text == "")
             {
@@ -495,7 +511,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
             if (dgBill.SelectedRows.Count > 0)
             {
@@ -510,7 +526,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        public void textBox5_TextChanged(object sender, EventArgs e)
         {
             if (txtPayAmount.Text.Length > 0)
             {
@@ -518,12 +534,12 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public void button3_Click(object sender, EventArgs e)
         {
         
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        public void button4_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < dgBill.Rows.Count; i++)
             {
@@ -569,12 +585,12 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        public void Menu_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        public void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
             Bill bill = new Bill();
