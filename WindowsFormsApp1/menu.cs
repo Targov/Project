@@ -527,7 +527,7 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < dgBill.Rows.Count; i++)
             {
-                String querry = "INSERT INTO Menu Values ('" + dgBill.Rows[i].Cells[0].Value + "','" + dgBill.Rows[i].Cells[1].Value + "','" + dgBill.Rows[i].Cells[2].Value + "','" + dgBill.Rows[i].Cells[3].Value + "','" + dgBill.Rows[i].Cells[4].Value + "')";
+                String querry = "INSERT INTO Menu (product_name, price, count, total, data) Values ('" + dgBill.Rows[i].Cells[0].Value + "','" + dgBill.Rows[i].Cells[1].Value + "','" + dgBill.Rows[i].Cells[2].Value + "','" + dgBill.Rows[i].Cells[3].Value + "','" + dgBill.Rows[i].Cells[4].Value + "')";
                 SqlCommand comand = new SqlCommand(querry, connection);     
                 connection.Open();
                 comand.ExecuteNonQuery();

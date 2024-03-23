@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
     public partial class Login : Form
     {
         Form2 tables = new Form2();
+        Admin admin = new Admin();
 
         public Login()
         {
@@ -28,8 +29,8 @@ namespace WindowsFormsApp1
             string connectionString = "Data Source=NIKOLAPC\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
 
             String username, userPassword;
-            username = textBox1.Text;
-            userPassword = textBox2.Text;
+            username = txtUsername.Text;
+            userPassword = txtPassword.Text;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
@@ -41,20 +42,25 @@ namespace WindowsFormsApp1
                     command.Parameters.AddWithValue("@Password", userPassword);
                     connection.Open();
                     int count = (int)command.ExecuteScalar();
-                    if (count > 0)
+                    if (username == "Admin" && count > 0)
+                    {
+                        this.Hide();
+                        admin.Show();
+                    }
+                    else if (count > 0)
                     {
                         tables.Show();
                         this.Hide();
                     }
                     else
                     { 
-                        label2.Visible = true;
+                        lblError.Visible = true;
                     }
                 }
                 catch
                 {
              
-                    label2.Visible = true;
+                    lblError.Visible = true;
                 }
                 finally { connection.Close(); }
             }
@@ -88,6 +94,18 @@ namespace WindowsFormsApp1
 
         private void Login_Load(object sender, EventArgs e)
         { 
+        }
+
+        private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShowPassword.Checked == true)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 
