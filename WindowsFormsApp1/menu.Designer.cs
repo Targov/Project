@@ -62,6 +62,7 @@
             this.txtPayAmount = new System.Windows.Forms.TextBox();
             this.txtChange = new System.Windows.Forms.TextBox();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgBill)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,9 +70,10 @@
             // 
             this.rbHotDrinks.AutoSize = true;
             this.rbHotDrinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbHotDrinks.Location = new System.Drawing.Point(34, 39);
+            this.rbHotDrinks.Location = new System.Drawing.Point(50, 106);
+            this.rbHotDrinks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbHotDrinks.Name = "rbHotDrinks";
-            this.rbHotDrinks.Size = new System.Drawing.Size(161, 28);
+            this.rbHotDrinks.Size = new System.Drawing.Size(212, 33);
             this.rbHotDrinks.TabIndex = 3;
             this.rbHotDrinks.TabStop = true;
             this.rbHotDrinks.Text = "Топли напитки";
@@ -82,9 +84,10 @@
             // 
             this.rbColdDrinks.AutoSize = true;
             this.rbColdDrinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbColdDrinks.Location = new System.Drawing.Point(211, 39);
+            this.rbColdDrinks.Location = new System.Drawing.Point(286, 106);
+            this.rbColdDrinks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbColdDrinks.Name = "rbColdDrinks";
-            this.rbColdDrinks.Size = new System.Drawing.Size(183, 28);
+            this.rbColdDrinks.Size = new System.Drawing.Size(235, 33);
             this.rbColdDrinks.TabIndex = 4;
             this.rbColdDrinks.TabStop = true;
             this.rbColdDrinks.Text = "Студени напитки";
@@ -95,9 +98,10 @@
             // 
             this.rbSoda.AutoSize = true;
             this.rbSoda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSoda.Location = new System.Drawing.Point(34, 73);
+            this.rbSoda.Location = new System.Drawing.Point(50, 148);
+            this.rbSoda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbSoda.Name = "rbSoda";
-            this.rbSoda.Size = new System.Drawing.Size(233, 28);
+            this.rbSoda.Size = new System.Drawing.Size(303, 33);
             this.rbSoda.TabIndex = 5;
             this.rbSoda.TabStop = true;
             this.rbSoda.Text = "Безалкохолни напитки";
@@ -108,9 +112,10 @@
             // 
             this.rbCocktail.AutoSize = true;
             this.rbCocktail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCocktail.Location = new System.Drawing.Point(34, 141);
+            this.rbCocktail.Location = new System.Drawing.Point(50, 232);
+            this.rbCocktail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbCocktail.Name = "rbCocktail";
-            this.rbCocktail.Size = new System.Drawing.Size(113, 28);
+            this.rbCocktail.Size = new System.Drawing.Size(147, 33);
             this.rbCocktail.TabIndex = 6;
             this.rbCocktail.TabStop = true;
             this.rbCocktail.Text = "Коктейли";
@@ -121,9 +126,10 @@
             // 
             this.rbAlcohol.AutoSize = true;
             this.rbAlcohol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbAlcohol.Location = new System.Drawing.Point(34, 107);
+            this.rbAlcohol.Location = new System.Drawing.Point(50, 190);
+            this.rbAlcohol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbAlcohol.Name = "rbAlcohol";
-            this.rbAlcohol.Size = new System.Drawing.Size(102, 28);
+            this.rbAlcohol.Size = new System.Drawing.Size(130, 33);
             this.rbAlcohol.TabIndex = 7;
             this.rbAlcohol.TabStop = true;
             this.rbAlcohol.Text = "Алкохол";
@@ -134,9 +140,10 @@
             // 
             this.rbExtras.AutoSize = true;
             this.rbExtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbExtras.Location = new System.Drawing.Point(302, 73);
+            this.rbExtras.Location = new System.Drawing.Point(408, 148);
+            this.rbExtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbExtras.Name = "rbExtras";
-            this.rbExtras.Size = new System.Drawing.Size(92, 28);
+            this.rbExtras.Size = new System.Drawing.Size(115, 33);
             this.rbExtras.TabIndex = 8;
             this.rbExtras.TabStop = true;
             this.rbExtras.Text = "Екстри";
@@ -147,9 +154,10 @@
             // 
             this.rbHotDishes.AutoSize = true;
             this.rbHotDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbHotDishes.Location = new System.Drawing.Point(255, 107);
+            this.rbHotDishes.Location = new System.Drawing.Point(345, 190);
+            this.rbHotDishes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbHotDishes.Name = "rbHotDishes";
-            this.rbHotDishes.Size = new System.Drawing.Size(139, 28);
+            this.rbHotDishes.Size = new System.Drawing.Size(182, 33);
             this.rbHotDishes.TabIndex = 9;
             this.rbHotDishes.TabStop = true;
             this.rbHotDishes.Text = "Топли ястия";
@@ -160,9 +168,10 @@
             // 
             this.rbDesert.AutoSize = true;
             this.rbDesert.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDesert.Location = new System.Drawing.Point(288, 141);
+            this.rbDesert.Location = new System.Drawing.Point(389, 232);
+            this.rbDesert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbDesert.Name = "rbDesert";
-            this.rbDesert.Size = new System.Drawing.Size(106, 28);
+            this.rbDesert.Size = new System.Drawing.Size(131, 33);
             this.rbDesert.TabIndex = 10;
             this.rbDesert.TabStop = true;
             this.rbDesert.Text = "Десерти";
@@ -173,9 +182,10 @@
             // 
             this.lblSelect.AutoSize = true;
             this.lblSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelect.Location = new System.Drawing.Point(30, 205);
+            this.lblSelect.Location = new System.Drawing.Point(45, 310);
+            this.lblSelect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelect.Name = "lblSelect";
-            this.lblSelect.Size = new System.Drawing.Size(77, 24);
+            this.lblSelect.Size = new System.Drawing.Size(101, 29);
             this.lblSelect.TabIndex = 11;
             this.lblSelect.Text = "Избери";
             // 
@@ -183,9 +193,10 @@
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(30, 258);
+            this.lblPrice.Location = new System.Drawing.Point(45, 376);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(54, 24);
+            this.lblPrice.Size = new System.Drawing.Size(72, 29);
             this.lblPrice.TabIndex = 12;
             this.lblPrice.Text = "Цена";
             // 
@@ -193,9 +204,10 @@
             // 
             this.lblCount.AutoSize = true;
             this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.Location = new System.Drawing.Point(30, 319);
+            this.lblCount.Location = new System.Drawing.Point(45, 451);
+            this.lblCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(56, 24);
+            this.lblCount.Size = new System.Drawing.Size(71, 29);
             this.lblCount.TabIndex = 13;
             this.lblCount.Text = "Брой";
             // 
@@ -203,9 +215,10 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(30, 376);
+            this.lblTotal.Location = new System.Drawing.Point(45, 521);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(106, 24);
+            this.lblTotal.Size = new System.Drawing.Size(139, 29);
             this.lblTotal.TabIndex = 14;
             this.lblTotal.Text = "Обща сума";
             // 
@@ -214,9 +227,10 @@
             this.cbChoose.BackColor = System.Drawing.Color.PapayaWhip;
             this.cbChoose.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbChoose.FormattingEnabled = true;
-            this.cbChoose.Location = new System.Drawing.Point(146, 202);
+            this.cbChoose.Location = new System.Drawing.Point(200, 307);
+            this.cbChoose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbChoose.Name = "cbChoose";
-            this.cbChoose.Size = new System.Drawing.Size(248, 32);
+            this.cbChoose.Size = new System.Drawing.Size(329, 37);
             this.cbChoose.TabIndex = 15;
             this.cbChoose.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -224,9 +238,10 @@
             // 
             this.txtPrice.BackColor = System.Drawing.Color.PapayaWhip;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(146, 255);
+            this.txtPrice.Location = new System.Drawing.Point(200, 372);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(121, 29);
+            this.txtPrice.Size = new System.Drawing.Size(160, 34);
             this.txtPrice.TabIndex = 16;
             this.txtPrice.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -234,9 +249,10 @@
             // 
             this.txtCount.BackColor = System.Drawing.Color.PapayaWhip;
             this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCount.Location = new System.Drawing.Point(146, 313);
+            this.txtCount.Location = new System.Drawing.Point(200, 443);
+            this.txtCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCount.Name = "txtCount";
-            this.txtCount.Size = new System.Drawing.Size(121, 29);
+            this.txtCount.Size = new System.Drawing.Size(160, 34);
             this.txtCount.TabIndex = 17;
             this.txtCount.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -245,9 +261,10 @@
             this.txtTotal.BackColor = System.Drawing.Color.PapayaWhip;
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(146, 373);
+            this.txtTotal.Location = new System.Drawing.Point(200, 517);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(121, 29);
+            this.txtTotal.Size = new System.Drawing.Size(160, 34);
             this.txtTotal.TabIndex = 18;
             this.txtTotal.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -255,9 +272,10 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(65, 459);
+            this.btnAdd.Location = new System.Drawing.Point(92, 623);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(130, 41);
+            this.btnAdd.Size = new System.Drawing.Size(173, 50);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Добави";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -267,9 +285,10 @@
             // 
             this.btnRemove.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(227, 459);
+            this.btnRemove.Location = new System.Drawing.Point(308, 623);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(130, 41);
+            this.btnRemove.Size = new System.Drawing.Size(173, 50);
             this.btnRemove.TabIndex = 20;
             this.btnRemove.Text = "Премахни";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -287,11 +306,12 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgBill.Location = new System.Drawing.Point(421, 39);
+            this.dgBill.Location = new System.Drawing.Point(561, 48);
+            this.dgBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgBill.Name = "dgBill";
             this.dgBill.ReadOnly = true;
             this.dgBill.RowHeadersWidth = 51;
-            this.dgBill.Size = new System.Drawing.Size(666, 432);
+            this.dgBill.Size = new System.Drawing.Size(888, 532);
             this.dgBill.TabIndex = 21;
             this.dgBill.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -340,9 +360,10 @@
             this.btnClear.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnClear.Location = new System.Drawing.Point(475, 487);
+            this.btnClear.Location = new System.Drawing.Point(633, 599);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(130, 41);
+            this.btnClear.Size = new System.Drawing.Size(173, 50);
             this.btnClear.TabIndex = 22;
             this.btnClear.Text = "Изчисти";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -353,9 +374,10 @@
             this.btnSaveInDB.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnSaveInDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveInDB.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSaveInDB.Location = new System.Drawing.Point(636, 487);
+            this.btnSaveInDB.Location = new System.Drawing.Point(848, 599);
+            this.btnSaveInDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveInDB.Name = "btnSaveInDB";
-            this.btnSaveInDB.Size = new System.Drawing.Size(130, 41);
+            this.btnSaveInDB.Size = new System.Drawing.Size(173, 50);
             this.btnSaveInDB.TabIndex = 23;
             this.btnSaveInDB.Text = "Запази";
             this.btnSaveInDB.UseVisualStyleBackColor = false;
@@ -366,9 +388,10 @@
             this.dtpData.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.dtpData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(925, 11);
+            this.dtpData.Location = new System.Drawing.Point(1233, 14);
+            this.dtpData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(122, 22);
+            this.dtpData.Size = new System.Drawing.Size(161, 26);
             this.dtpData.TabIndex = 24;
             this.dtpData.Value = new System.DateTime(2024, 3, 23, 0, 0, 0, 0);
             this.dtpData.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -377,9 +400,10 @@
             // 
             this.lblTotalOfBill.AutoSize = true;
             this.lblTotalOfBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalOfBill.Location = new System.Drawing.Point(784, 497);
+            this.lblTotalOfBill.Location = new System.Drawing.Point(1045, 612);
+            this.lblTotalOfBill.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalOfBill.Name = "lblTotalOfBill";
-            this.lblTotalOfBill.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalOfBill.Size = new System.Drawing.Size(139, 29);
             this.lblTotalOfBill.TabIndex = 25;
             this.lblTotalOfBill.Text = "Обща сума";
             // 
@@ -387,9 +411,10 @@
             // 
             this.lblPayAmount.AutoSize = true;
             this.lblPayAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayAmount.Location = new System.Drawing.Point(784, 544);
+            this.lblPayAmount.Location = new System.Drawing.Point(1045, 670);
+            this.lblPayAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPayAmount.Name = "lblPayAmount";
-            this.lblPayAmount.Size = new System.Drawing.Size(132, 24);
+            this.lblPayAmount.Size = new System.Drawing.Size(172, 29);
             this.lblPayAmount.TabIndex = 26;
             this.lblPayAmount.Text = "Платена сума";
             // 
@@ -397,9 +422,10 @@
             // 
             this.lblChange.AutoSize = true;
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChange.Location = new System.Drawing.Point(784, 586);
+            this.lblChange.Location = new System.Drawing.Point(1045, 721);
+            this.lblChange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(64, 24);
+            this.lblChange.Size = new System.Drawing.Size(81, 29);
             this.lblChange.TabIndex = 27;
             this.lblChange.Text = "Ресто";
             // 
@@ -407,9 +433,10 @@
             // 
             this.txtTotalOfBill.Enabled = false;
             this.txtTotalOfBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalOfBill.Location = new System.Drawing.Point(925, 492);
+            this.txtTotalOfBill.Location = new System.Drawing.Point(1233, 606);
+            this.txtTotalOfBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTotalOfBill.Name = "txtTotalOfBill";
-            this.txtTotalOfBill.Size = new System.Drawing.Size(162, 29);
+            this.txtTotalOfBill.Size = new System.Drawing.Size(215, 34);
             this.txtTotalOfBill.TabIndex = 28;
             this.txtTotalOfBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTotalOfBill.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -417,9 +444,10 @@
             // txtPayAmount
             // 
             this.txtPayAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPayAmount.Location = new System.Drawing.Point(925, 541);
+            this.txtPayAmount.Location = new System.Drawing.Point(1233, 666);
+            this.txtPayAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPayAmount.Name = "txtPayAmount";
-            this.txtPayAmount.Size = new System.Drawing.Size(162, 29);
+            this.txtPayAmount.Size = new System.Drawing.Size(215, 34);
             this.txtPayAmount.TabIndex = 29;
             this.txtPayAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPayAmount.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
@@ -428,9 +456,10 @@
             // 
             this.txtChange.Enabled = false;
             this.txtChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChange.Location = new System.Drawing.Point(925, 583);
+            this.txtChange.Location = new System.Drawing.Point(1233, 718);
+            this.txtChange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtChange.Name = "txtChange";
-            this.txtChange.Size = new System.Drawing.Size(162, 29);
+            this.txtChange.Size = new System.Drawing.Size(215, 34);
             this.txtChange.TabIndex = 30;
             this.txtChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtChange.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
@@ -439,20 +468,34 @@
             // 
             this.btnPrint.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(475, 546);
+            this.btnPrint.Location = new System.Drawing.Point(633, 672);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(291, 37);
+            this.btnPrint.Size = new System.Drawing.Size(388, 46);
             this.btnPrint.TabIndex = 31;
             this.btnPrint.Text = "Принтирай";
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.button5_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.PapayaWhip;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(104, 40);
+            this.btnBack.TabIndex = 32;
+            this.btnBack.Text = "Назад";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(1113, 618);
+            this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtChange);
             this.Controls.Add(this.txtPayAmount);
@@ -482,7 +525,7 @@
             this.Controls.Add(this.rbSoda);
             this.Controls.Add(this.rbColdDrinks);
             this.Controls.Add(this.rbHotDrinks);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Menu";
             this.Text = "menu";
             ((System.ComponentModel.ISupportInitialize)(this.dgBill)).EndInit();
@@ -526,5 +569,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -78,5 +78,12 @@ namespace WindowsFormsApp1
             menu.Show();
             this.Hide();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Login loginform = new Login();
+            this.Hide();
+            loginform.Show();
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         public AddNewEmployee()
         {
             InitializeComponent();
-            connection.ConnectionString = "Data Source=NIKOLAPC\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
+            connection.ConnectionString = "Data Source=DESKTOP-G7IH5U6\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,6 +34,10 @@ namespace WindowsFormsApp1
             connection.Open();
             comand.ExecuteNonQuery();
             connection.Close();
+            this.Hide();
+            Admin admin = new Admin();
+            admin.Show();
+
         }
     }
 }

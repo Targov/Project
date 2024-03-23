@@ -24,5 +24,12 @@ namespace WindowsFormsApp1
             AddNewEmployee addNewEmployee = new AddNewEmployee();
             addNewEmployee.Show();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Login loginform = new Login();
+            this.Hide();
+            loginform.Show();
+        }
     }
 }

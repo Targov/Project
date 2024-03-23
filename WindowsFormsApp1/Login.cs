@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
 
         public void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
+            string connectionString = "Data Source=DESKTOP-G7IH5U6\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
 
             String username, userPassword;
             username = txtUsername.Text;
@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
                     command.Parameters.AddWithValue("@Password", userPassword);
                     connection.Open();
                     int count = (int)command.ExecuteScalar();
-                    if (username == "Admin" && count > 0)
+                    if (username.Equals("Admin") && count > 0)
                     {
                         this.Hide();
                         admin.Show();

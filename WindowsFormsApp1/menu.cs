@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Relational;
 
 namespace WindowsFormsApp1
 {
@@ -19,7 +20,7 @@ namespace WindowsFormsApp1
         public Menu()
         {
             InitializeComponent();
-            connection.ConnectionString = "Data Source=NIKOLAPC\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
+            connection.ConnectionString = "Data Source=DESKTOP-G7IH5U6\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
         }
         public Button BtnAdd => btnAdd;
         public bool IsMenuVisible => this.Visible;
@@ -595,6 +596,13 @@ namespace WindowsFormsApp1
             this.Hide();
             Bill bill = new Bill();
             bill.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form2 tables = new Form2();
+            this.Hide();
+            tables.Show();
         }
     }
 }
