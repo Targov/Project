@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace WindowsFormsApp1
     public partial class Form2 : Form
     {
         Menu menu = new Menu();
+        public SqlConnection connection = new SqlConnection();
         public Form2()
         {
             InitializeComponent();
@@ -26,7 +28,12 @@ namespace WindowsFormsApp1
         public bool IsFormVisible => this.Visible;
         public void button2_Click(object sender, EventArgs e)
         {
-
+            connection.ConnectionString = "Data Source=NIKOLAPC\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
+            String querry = "INSERT INTO Tables (table_number) Values (1)";
+            SqlCommand comand = new SqlCommand(querry, connection);
+            connection.Open();
+            comand.ExecuteNonQuery();
+            connection.Close();
             menu.Show();
             this.Hide();
 

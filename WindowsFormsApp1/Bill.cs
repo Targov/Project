@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         private void Bill_Load(object sender, EventArgs e)
         {
-            String querry = "select * from Menu";
+            String querry = "select * from Menu2";
             SqlCommand comand = new SqlCommand(querry, connection);
             connection.Open();
             SqlDataAdapter adapter = new SqlDataAdapter(comand); 

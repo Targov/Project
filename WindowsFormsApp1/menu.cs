@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         public Menu()
         {
             InitializeComponent();
-            connection.ConnectionString = "Data Source=DESKTOP-G7IH5U6\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
+            connection.ConnectionString = "Data Source=NIKOLAPC\\SQLEXPRESS;Initial Catalog=LoginDB;Integrated Security=True";
         }
         public Button BtnAdd => btnAdd;
         public bool IsMenuVisible => this.Visible;
@@ -544,10 +544,16 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < dgBill.Rows.Count; i++)
             {
-                String querry = "INSERT INTO Menu (product_name, price, count, total, data) Values ('" + dgBill.Rows[i].Cells[0].Value + "','" + dgBill.Rows[i].Cells[1].Value + "','" + dgBill.Rows[i].Cells[2].Value + "','" + dgBill.Rows[i].Cells[3].Value + "','" + dgBill.Rows[i].Cells[4].Value + "')";
-                SqlCommand comand = new SqlCommand(querry, connection);     
+                string query = "INSERT INTO Menu2 (product_name, price, count, total, data) VALUES (@product_name, @price, @count, @total, @data)";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@product_name", dgBill.Rows[i].Cells[0].Value);
+                command.Parameters.AddWithValue("@price", dgBill.Rows[i].Cells[1].Value);
+                command.Parameters.AddWithValue("@count", dgBill.Rows[i].Cells[2].Value);
+                command.Parameters.AddWithValue("@total", dgBill.Rows[i].Cells[3].Value);
+                command.Parameters.AddWithValue("@data", (dgBill.Rows[i].Cells[4].Value).ToString());
                 connection.Open();
-                comand.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 connection.Close();
             }   
             dgBill.Rows.Clear();
